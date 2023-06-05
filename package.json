@@ -1,16 +1,33 @@
 {
-	"name": "unify",
-	"version": "0.0.1",
-	"description": "Universal Simplified UI",
+	"name": "@pateldhaval/unify",
+	"version": "0.0.0",
+	"description": "Universal Simplify UI",
 	"author": "Dhaval Patel",
-	"license": "ISC",
+	"license": "MIT",
+	"private": false,
+	"keywords": [
+		"React",
+		"Typescript",
+		"Components",
+		"Library"
+	],
 	"source": "src/index.ts",
 	"main": "dist/main.js",
 	"module": "dist/module.js",
 	"types": "dist/types.d.ts",
+	"files": [
+		"dist/**/*"
+	],
 	"scripts": {
 		"watch": "parcel watch",
-		"build": "parcel build"
+		"build": "parcel build",
+		"prepare": "npm run build",
+		"version": "git add -A src",
+		"postversion": "git push && git push --tags"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/pateldhaval/unify.git"
 	},
 	"dependencies": {
 		"react": "^18.2.0",
